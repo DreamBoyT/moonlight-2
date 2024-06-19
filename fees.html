@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="TemplateMo">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+  <title>Hostel Fees</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+
+  <!-- FontAwesome Link -->
+  <script src="https://kit.fontawesome.com/daca5e8a7c.js" crossorigin="anonymous"></script>
+
+
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Main Styling */
+    .main-container {
+      padding: 30px;
+    }
+
+    /* HEADING */
+    .custom-heading {
+      text-align: center;
+    }
+
+    .custom-heading__title {
+      font-weight: 600;
+    }
+
+    .custom-heading__credits {
+      margin: 10px 0px;
+      color: #888888;
+      font-size: 25px;
+      transition: all 0.5s;
+    }
+
+    .custom-heading__link {
+      text-decoration: none;
+    }
+
+    .custom-heading__credits .custom-heading__link {
+      color: inherit;
+    }
+
+    /* CARDS */
+    .custom-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .custom-card {
+      margin: 20px;
+      padding: 20px;
+      width: 500px;
+      min-height: 200px;
+      display: grid;
+      grid-template-rows: 20px 50px 1fr 50px;
+      border-radius: 10px;
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+      transition: all 0.2s;
+    }
+
+    .custom-card:hover {
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+      transform: scale(1.01);
+    }
+
+    .custom-card__link,
+    .custom-card__exit,
+    .custom-card__icon {
+      position: relative;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .custom-card__link::after {
+      position: absolute;
+      top: 25px;
+      left: 0;
+      content: "";
+      width: 0%;
+      height: 3px;
+      background-color: rgba(255, 255, 255, 0.6);
+      transition: all 0.5s;
+    }
+
+    .custom-card__link:hover::after {
+      width: 100%;
+    }
+
+    .custom-card__exit {
+      grid-row: 1/2;
+      justify-self: end;
+    }
+
+    .custom-card__icon {
+      grid-row: 2/3;
+      font-size: 30px;
+    }
+
+    .custom-card__title {
+      grid-row: 3/4;
+      font-weight: 400;
+      color: #ffffff;
+    }
+
+    .custom-card__apply {
+      grid-row: 4/5;
+      align-self: center;
+    }
+
+    /* CARD BACKGROUNDS */
+    .custom-card-1 {
+      background: radial-gradient(#FF9900, #FFBB64);
+    }
+
+    .custom-card-2 {
+      background: radial-gradient(#1A4D9F, #7AA2E3);
+    }
+
+    .custom-card-3 {
+      background: radial-gradient(#FF9900, #FFBB64);
+    }
+
+    .custom-card-4 {
+      background: radial-gradient(#1A4D9F, #7AA2E3);
+    }
+
+    .custom-card-5 {
+      background: radial-gradient(#FFBB64, #7AA2E3);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1600px) {
+      .custom-cards {
+        justify-content: center;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-xs-12">
+          <ul class="left-info">
+            <li><a href="#"><i class="fa fa-clock-o"></i>Mon-Fri 09:00-05:00</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>794-743-4816</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="right-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <h2>SVCE HOSTEL</h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"> About </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="boysHostel.html">Boys </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="girlsHostel.html">Girls </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Feathers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rules.html"> Rules </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="food.html"> Food </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="fees.html"> Fees </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Content -->
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Fees Structure</h1>
+          <span>Discover Fee Structure and For Room Booking Details, Please Contact the Hostel Directly</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="main-container">
+    <div class="custom-heading">
+      <!-- <h1 class="custom-heading__title">Gradient Banner Cards</h1> -->
+      <p class="custom-heading__credits">Understanding Fee Structures Over the Years</p>
+    </div>
+    <div class="custom-cards">
+      <div class="custom-card custom-card-1">
+        <div class="custom-card__icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <p class="custom-card__exit"><i class="fas fa-times"></i></p>
+        <h2 class="custom-card__title">Fees Structure 2023-24 for Senior Students</h2>
+        <p class="custom-card__apply">
+    <a class="custom-card__link" href="assets/Circular-Hostel-fees-2023-24.pdf" target="_blank">View Details <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="custom-card custom-card-2">
+        <div class="custom-card__icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <p class="custom-card__exit"><i class="fas fa-times"></i></p>
+        <h2 class="custom-card__title">Fees Structure 2023-24 for Senior Students</h2>
+        <p class="custom-card__apply">
+          <a class="custom-card__link" href="#">View Details <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="custom-card custom-card-3">
+        <div class="custom-card__icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <p class="custom-card__exit"><i class="fas fa-times"></i></p>
+        <h2 class="custom-card__title">Fees Structure 2022-23 for Senior Students</h2>
+        <p class="custom-card__apply">
+          <a class="custom-card__link" href="#">View Details <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="custom-card custom-card-4">
+        <div class="custom-card__icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <p class="custom-card__exit"><i class="fas fa-times"></i></p>
+        <h2 class="custom-card__title">Fees Structure 2021-22 for Senior Students</h2>
+        <p class="custom-card__apply">
+          <a class="custom-card__link" href="#">View Details <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+      <div class="custom-card custom-card-5">
+        <div class="custom-card__icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <p class="custom-card__exit"><i class="fas fa-times"></i></p>
+        <h2 class="custom-card__title">Fees Structure 2020-21 for Senior Students</h2>
+        <p class="custom-card__apply">
+          <a class="custom-card__link" href="#">View Details <i class="fas fa-arrow-right"></i></a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Starts Here -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 footer-item">
+          <h4>About Website</h4>
+          <p>The website was crafted by a hosteller, ensuring a credible and authentic user experience.</p>
+          <ul class="social-icons">
+            <li><a rel="nofollow" href="https://fb.com/templatemo" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-item">
+          <h4>Useful Links</h4>
+          <ul class="menu-list">
+            <li><a href="#">General Information</a></li>
+            <li><a href="#">Rules & Regulation</a></li>
+            <li><a href="#">Hostel Timings</a></li>
+            <li><a href="#">Boys Hostel Mess Menu</a></li>
+            <li><a href="#">Girls Hostel Mess Menu</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-item">
+          <h4>Additional Pages</h4>
+          <ul class="menu-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Boys Hostel</a></li>
+            <li><a href="#">Girls Hostel</a></li>
+            <li><a href="#">Feathers</a></li>
+            <li><a href="#">Hostel Fees</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-item last-item">
+          <h4>Contact Us</h4>
+          <div class="contact-form">
+            <form id="contact footer-contact" action="" method="post">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <fieldset>
+                    <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>Copyright &copy; 2024 SVCE HOSTEL
+
+            - Design: <a rel="nofollow noopener" href="" target="_blank">Tamizhselvan</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Additional Scripts -->
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/owl.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/accordions.js"></script>
+
+  <script language="text/Javascript">
+    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+    function clearField(t) { //declaring the array outside of the
+      if (!cleared[t.id]) { // function makes it static and global
+        cleared[t.id] = 1; // you could use true and false, but that's more typing
+        t.value = ''; // with more chance of typos
+        t.style.color = '#fff';
+      }
+    }
+  </script>
+
+</body>
+
+</html>

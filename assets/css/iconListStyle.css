@@ -1,0 +1,359 @@
+
+
+/*
+---------------------------------------------
+services
+---------------------------------------------
+*/
+
+section.services {
+  margin-top: 90px;
+}
+
+.services .service-item {
+  border-radius: 5px;
+  padding: 40px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.services .service-item:hover i {
+  margin-top: 15px;
+}
+
+.services .service-item h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.services .service-item i {
+  transition: all .5s;
+  float: left;
+  font-size: 64px;
+  color: #FF9900;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+
+
+
+/*
+---------------------------------------------
+services page
+---------------------------------------------
+*/
+
+.main-services .service-item {
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #ecf8f2;
+}
+
+.main-services .last-service {
+  border-bottom: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.main-services  .left-image {
+  margin-right: 15px;
+}
+
+.main-services  .left-image img {
+  border-radius: 5px;
+}
+
+.main-services  .right-image {
+  margin-left: 15px;
+}
+
+.main-services  .right-image img {
+  border-radius: 5px;
+}
+
+.main-services .right-text-content {
+  margin-left: 15px;
+}
+
+.main-services .left-text-content {
+  margin-right: 15px;
+}
+
+.main-services .right-text-content i,
+.main-services .left-text-content i {
+  font-size: 64px;
+  color: #FF9900;
+  background-color: #ecf8f2;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  display: inline-block;
+  line-height: 120px;
+  border-radius: 5px;
+}
+
+.main-services .right-text-content h4,
+.main-services .left-text-content h4 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #212741;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+section.service-details .naccs {
+  position: relative;
+}
+
+section.service-details .naccs .menu {
+  text-align: center;
+}
+
+section.service-details .naccs .menu div {
+  padding: 15px 30px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px !important;
+  margin-right: 30px;
+  font-size: 18px;
+  color: #212741;
+  background-color: #fff;
+  cursor: pointer;
+  vertical-align: middle;
+  font-weight: 600;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+section.service-details .naccs .menu div.active {
+  color: #ff511a;
+}
+
+section.service-details ul.nacc {
+  margin-top: 50px !important;
+  position: relative;
+  min-height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section.service-details ul.nacc li {
+  background-color: #fff;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(50px);
+  position: absolute;
+  list-style: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+section.service-details ul.nacc li .left-image {
+  position: absolute;
+  margin-right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+section.service-details ul.nacc li .left-image img {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+section.service-details ul.nacc li .right-content {
+  padding: 50px 50px 50px 0px;
+  margin-left: 470px;
+}
+
+section.service-details ul.nacc li .right-content h4 {
+  font-size: 24px;
+  color: #212741;
+  margin-bottom: 25px;
+  font-weight: 700;
+  line-height: 40px;
+  margin-right: 120px;
+}
+
+section.service-details ul.nacc li .right-content ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+section.service-details ul.nacc li .right-content span {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #212741;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+section.service-details ul.nacc li .right-content .last-span {
+  margin-bottom: 0px;
+}
+
+section.service-details ul.nacc li .right-content p {
+  margin-bottom: 30px;
+}
+
+section.service-details ul.nacc li.active {
+  position: relative;
+  transition-delay: 0.3s;
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+
+
+
+/*
+---------------------------------------------
+responsive
+---------------------------------------------
+*/
+
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 992px) {
+  .header-area .main-nav .nav li:last-child {
+    display: none;
+  }
+  .header-area .main-nav .nav li ul li:last-child {
+    display: inline-block;
+  }
+  .header-area {
+    background-color: #212741;
+  }
+  .slide-inner .header-text {
+    width: 80%;
+  }
+  .simple-cta {
+    text-align: center;
+  }
+  section.simple-cta .buttons {
+    justify-content: center;
+  }
+  section.about-us .naccs .menu div,
+  section.service-details .naccs .menu div {
+    margin-right: 15px;
+    font-size: 15px;
+    padding: 15px 20px;
+  }
+  section.about-us .right-content {
+    margin-left: 0px;
+    margin-top: 60px;
+  }
+  section.calculator .left-image {
+    display: none;
+  }
+  .testimonials .item img {
+    max-width: 200px;
+    right: 50px;
+  }
+  section.partners .item {
+    margin:15px;
+  }
+  section.top-section .accordions {
+    margin-left: 0px;
+    margin-top: 45px;
+  }
+  .what-we-do .left-content {
+    margin-right: 0px;
+    margin-bottom: 45px;
+  }
+  .main-services .left-image {
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+  .main-services .right-text-content {
+    margin-left: 0px;
+  }
+  .main-services .right-image {
+    margin-left: 0px;
+    margin-top: 30px;
+  }
+  section.service-details ul.nacc li .left-image {
+    position: relative;
+    margin-right: 0px;
+    transform: translateY(0px);
+  }
+  section.service-details ul.nacc li .left-image img {
+    border-radius: 15px;
+  }
+  section.service-details ul.nacc li .right-content {
+    padding: 50px;
+    margin-left: 0px;
+  }
+  section.service-details ul.nacc li .right-content h4 {
+    margin-right: 0px;
+  }
+  section.service-details ul.nacc li.active {
+    display: inline-block;
+  }
+  section.service-details ul.nacc li {
+    display: none;
+  }
+  section.map .info-item {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-area .main-nav .logo {
+    line-height: 100px;
+  }
+  .background-header .main-nav .logo {
+    line-height: 80px;
+  }
+  .header-area .main-nav .nav li.has-sub ul.sub-menu {
+    display: none;
+  }
+  .slide-inner .header-text p {
+    display: none;
+  }
+  .slide-inner .header-text {
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .slide-inner .header-text .div-dec {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .slide-inner .header-text .buttons {
+    display: inline-flex;
+  }
+  .slide-inner .header-text .buttons .green-button {
+    float: none;
+  }
+  .services .service-item i {
+    margin-bottom: 35px;
+  }
+  section.about-us ul.nacc li span.item-title {
+    font-size: 14px !important;
+  }
+  section.about-us ul.nacc li span.item {
+    font-size: 13px;
+  }
+  .testimonials .item i {
+    margin-bottom: 60px;
+  }
+  .testimonials .item img {
+    max-width: 100px;
+    right: 50px;
+    top: 35px;
+    transform: translateY(0);
+  }
+  .testimonials .item {
+    padding: 50px;
+  }
+}

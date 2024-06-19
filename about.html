@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="TemplateMo">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+  <title>About Page</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <!--
+style for story
+-->
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    section {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      margin: 0;
+      padding: 0;
+      background-color: #FEFBF6;
+    }
+
+    .heading {
+      font-size: 5.25vmin;
+      text-align: center;
+      color: black;
+    }
+
+    .paragraph {
+      font-size: max(10pt, 2.5vmin);
+      line-height: 1.4;
+      color: black;
+      margin-bottom: 1.5rem;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      width: 150vmin;
+      /* Increased width */
+      height: 80vmin;
+      /* Increased height */
+      margin: 2rem auto;
+      border: 10px solid;
+      /* Increased border thickness */
+      border-color: #F7C566;
+      transition: 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .overlay-container {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      padding: 1rem 0.75rem;
+      background: #1A4D9F;
+      transition: 0.4s ease-in-out;
+      z-index: 1;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 15vmin;
+      height: 100%;
+      padding: 0.5rem 0 0 0.5rem;
+      border: 3px solid;
+      border-image: linear-gradient(to bottom, #ffb700 5%, #FFFFFF 35% 65%, #F2F2F2 95%) 0 0 0 100%;
+      transition: 0.3s ease-in-out 0.2s;
+      z-index: 1;
+    }
+
+    .name {
+      color: #1A4D9F;
+    }
+
+    .image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60vmin;
+      height: 100%;
+      background-image: url("assets/images/book.png");
+      background-size: cover;
+      transition: 0.3s ease-in-out;
+    }
+
+    .inset-img {
+      max-width: 50%;
+      margin: 0.25em 1em 1em 0;
+      border-radius: 0.25em;
+      float: left;
+    }
+
+    .dots-container {
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 55px;
+      height: 4vmin;
+      transition: 0.3s ease-in-out 0.3s;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      background: #FF9900;
+      border: 1px solid indigo;
+      border-radius: 50%;
+      transition: 0.3s ease-in-out 0.3s;
+    }
+
+    .text-content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60vmin;
+      height: 100%;
+      padding: 3vmin 4vmin;
+      background: #F6F5F2;
+      box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / 0.4);
+      overflow-y: scroll;
+    }
+
+    .wrapper:hover .overlay-container {
+      transform: translateX(-60vmin);
+    }
+
+    .wrapper:hover .image {
+      width: 30vmin;
+    }
+
+    .wrapper:hover .content {
+      border: none;
+      transition-delay: 0.2s;
+      transform: translateX(60vmin);
+    }
+
+    .wrapper:hover .dots-container {
+      transform: translateX(1rem);
+    }
+
+    .wrapper:hover .dots-container .dot {
+      background: white;
+    }
+
+    /* Animations and timing delays */
+    .animate {
+      animation-duration: 0.7s;
+      animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+      animation-fill-mode: backwards;
+    }
+
+    /* Pop In */
+    .pop-in {
+      animation-name: pop-in;
+    }
+
+    @keyframes pop-in {
+      0% {
+        opacity: 0;
+        transform: scale(0.5, 0.5);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+    }
+
+    /* Slide In */
+    .slide-in {
+      animation-name: slide-in;
+    }
+
+    @keyframes slide-in {
+      0% {
+        opacity: 0;
+        transform: translate(4em, 0);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+
+    /* Slide Left */
+    .slide-left {
+      animation-name: slide-left;
+    }
+
+    @keyframes slide-left {
+      0% {
+        opacity: 0;
+        transform: translate(-40px, 0);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+
+    .slide-up {
+      animation-name: slide-up;
+    }
+
+    @keyframes slide-up {
+      0% {
+        opacity: 0;
+        transform: translateY(3em);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 {
+      animation-delay: 0.3s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.6s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.9s;
+    }
+
+    .delay-4 {
+      animation-delay: 1.2s;
+    }
+
+    .delay-5 {
+      animation-delay: 1.5s;
+    }
+
+    .delay-6 {
+      animation-delay: 1.8s;
+    }
+
+    .delay-7 {
+      animation-delay: 2.1s;
+    }
+
+    .delay-8 {
+      animation-delay: 2.4s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-xs-12">
+          <ul class="left-info">
+            <li><a href="#"><i class="fa fa-clock-o"></i>Mon-Fri 09:00-05:00</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>794-743-4816</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="right-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <h2>SVCE HOSTEL</h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"> About </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="boysHostel.html">Boys </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="girlsHostel.html">Girls </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Feathers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rules.html"> Rules </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="food.html"> Food </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="fees.html"> Fees </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Content -->
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>About Us</h1>
+          <span>Discover the Heart of SVCE Hostel Life</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- . -->
+  <!-- story -->
+  <section>
+    <div class="wrapper">
+      <div class="overlay-container">
+        <div class="content animate slide-left delay-2">
+          <h1 class="animate slide-left pop-in delay-4 heading" style="font-size: 85px; color: #FF9900;">
+            Vibrant Student Campus Life
+          </h1>
+          <p class="animate slide-left pop-in delay-5 paragraph" style="color: #E2DFD0;">Visit <span style="color: #FF9900;">SVCE</span></p>
+        </div>
+
+        <div class="image animate slide delay-5"></div>
+        <div class="dots-container animate">
+          <div class="dot animate slide-up delay-6"></div>
+          <div class="dot animate slide-up delay-7"></div>
+          <div class="dot animate slide-up delay-8"></div>
+        </div>
+      </div>
+      <div class="text-content">
+        <p><img class="inset-img" src="assets/images/water.png" alt="" />Welcome to our college hostel, a haven for students seeking a balanced and enriching residential experience. We offer essential amenities, quality education, and a serene campus
+          environment.</p>
+
+        <br>
+        <h2 style="color: #1A4D9F;">Hostel Block and Mess Halls</h2>
+        <hr>
+        <p>Our hostel rooms are furnished with essential furniture and feature good ventilation and lighting. Each floor is equipped with bathrooms, toilets, and hot water through a geyser or solar heater. Emergency power is available via two standby
+          diesel generators. Separate mess halls for gents and ladies boast highly mechanized kitchens serving a pure vegetarian menu, predominantly South Indian, revised by students each semester.</p>
+        <br>
+        <h2 style="color: #1A4D9F;">Governance</h2>
+        <hr>
+        <p>Hostel governance is managed by a Warden and office staff, with a Welfare Committee, including student and management representatives, meeting monthly to enhance hostel life. The Dean of Student Welfare and Maintenance Department reps also
+          participate as needed.</p>
+        <br>
+        <h2 style="color: #1A4D9F;">Highlights</h2>
+        <hr>
+        <p>Our college offers excellent placement opportunities with numerous recruiters visiting the campus. The peaceful, green surroundings create an ideal learning environment. We pride ourselves on delivering quality education through our
+          outstanding faculty and staff. Additionally, our state-of-the-art infrastructure includes well-equipped labs, modern classrooms, and extensive sports facilities.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- . -->
+
+
+  <div class="team" style="margin-top: 0; background-color: #EEF7FF;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Our <em>Hostel Committee</em></h2>
+            <span>Ensuring Supportive Environment</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-item">
+            <img src="assets/images/team_01.png" alt="">
+            <div class="down-content">
+              <h4 class="name"> S. Ganesh Vaidyanathan</h4>
+              <span>Principal, Chief Warden</span>
+              <p><a href="mailto:principal@svce.ac.in">principal@svce.ac.in</a><br>04427152000 Extn 102,103</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-item">
+            <img src="assets/images/pic.png" alt="">
+            <div class="down-content">
+              <h4 class="name"> A. Bhaskaran</h4>
+              <span>Professor & Warden, APH</span>
+              <p><a href="mailto:warden@svce.ac.in">warden@svce.ac.in</a><br>04427152000 Extn. 900,901</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-item">
+            <img src="assets/images/pic.png" alt="">
+            <div class="down-content">
+              <h4 class="name">M. Anandan</h4>
+              <span>Asso. Prof & Dy. Warden, MAR</span>
+              <p><a href="mailto:anand@svce.ac.in">anand@svce.ac.in</a><br>04427152000 Extn. 993, 9443813896</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Our <em>Residential Tutors</em></h2>
+            <span>Supporting Student Living</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-item">
+            <img src="assets/images/pic.png" alt="">
+            <div class="down-content">
+              <h4 class="name">T. Annamalai</h4>
+              <span>Asso. Prof, EEE</span>
+              <p><a href="mailto:annamalai@svce.ac.in">annamalai@svce.ac.in</a><br>Block-V (GH)<br>04427152000 Extn 991,9944779572</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-item">
+            <img src="assets/images/pic.png" alt="">
+            <div class="down-content">
+              <h4 class="name"> M. Ananda Boopathy</h4>
+              <span>Asst. Prof, CHE</span>
+              <p><a href="mailto:maboopathy@svce.ac.in">maboopathy@svce.ac.in</a><br>BLOCK II (GH)<br>8056794144</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-item">
+            <img src="assets/images/pic.png" alt="">
+            <div class="down-content">
+              <h4 class="name"> R. J. Venkatesh </h4>
+              <span>Asst.Prof, EEE</span>
+              <p><a href="mailto:rjv@svce.ac.in">rjv@svce.ac.in</a><br>BLOCK VII (GH)<br>9283302578</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Our <em>Hostel Staff</em></h2>
+            <span>Ensuring Comfortable Living</span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-item">
+            <img src="assets/images/pic.png" alt="">
+            <div class="down-content">
+              <h4 class="name"> M. Saravanan </h4>
+              <span>Attender</span>
+              <p><a href="mailto:emsaravanan@svce.ac.in">emsaravanan@svce.ac.in</a><br>GH Block I and III Maintenance <br> 7708028559</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-item">
+            <img src="assets/images/pic.png" alt="">
+            <div class="down-content">
+              <h4 class="name">J. Nagarajan</h4>
+              <span>Attender</span>
+              <p><a href="mailto:nagarajan@svce.ac.in">nagarajan@svce.ac.in</a><br>GH Block IV and VI Maintenance <br> 8667440985</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-item">
+            <img src="assets/images/pic.png" alt="">
+            <div class="down-content">
+              <h4 class="name">A. B. Manoharan</h4>
+              <span>Assistant</span>
+              <p><a href="mailto:abmano@svce.ac.in">abmano@svce.ac.in</a><br>GH Block VII Incharge<br>04427152000 Extn 917 9444978284</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br><br><br>
+  <!-- Footer Starts Here -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 footer-item">
+          <h4>About Website</h4>
+          <p>The website was crafted by a hosteller, ensuring a credible and authentic user experience.</p>
+          <ul class="social-icons">
+            <li><a rel="nofollow" href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-item">
+          <h4>Useful Links</h4>
+          <ul class="menu-list">
+            <li><a href="#">General Information</a></li>
+            <li><a href="#">Rules & Regulation</a></li>
+            <li><a href="#">Hostel Timings</a></li>
+            <li><a href="#">Boys Hostel Mess Menu</a></li>
+            <li><a href="#">Girls Hostel Mess Menu</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-item">
+          <h4>Additional Pages</h4>
+          <ul class="menu-list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Boys Hostel</a></li>
+            <li><a href="#">Girls Hostel</a></li>
+            <li><a href="#">Feathers</a></li>
+            <li><a href="#">Hostel Fees</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-item last-item">
+          <h4>Contact Us</h4>
+          <div class="contact-form">
+            <form id="contact footer-contact" action="" method="post">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <fieldset>
+                    <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>Copyright &copy; 2024 SVCE HOSTEL
+
+            - Design: <a rel="nofollow noopener" href="" target="_blank">Tamizhselvan</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Additional Scripts -->
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/owl.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/accordions.js"></script>
+
+  <script language="text/Javascript">
+    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+    function clearField(t) { //declaring the array outside of the
+      if (!cleared[t.id]) { // function makes it static and global
+        cleared[t.id] = 1; // you could use true and false, but that's more typing
+        t.value = ''; // with more chance of typos
+        t.style.color = '#fff';
+      }
+    }
+  </script>
+
+</body>
+
+</html>
